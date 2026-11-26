@@ -28,38 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_persaldo = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.lst_nomi = new System.Windows.Forms.ListBox();
+            this.lst_conti = new System.Windows.Forms.ListBox();
+            this.lst_saldi = new System.Windows.Forms.ListBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_conto = new System.Windows.Forms.TextBox();
+            this.txt_nome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_nomisaldo = new System.Windows.Forms.Label();
+            this.lbl_contosaldo = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.btn_nomi = new System.Windows.Forms.Button();
+            this.btn_numero = new System.Windows.Forms.Button();
+            this.btn_saldo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_persaldo
             // 
-            this.button1.BackColor = System.Drawing.Color.MistyRose;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Blue;
-            this.button1.Location = new System.Drawing.Point(64, 282);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 49);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Visualizza persona\r\n e saldo";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_persaldo.BackColor = System.Drawing.Color.MistyRose;
+            this.btn_persaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_persaldo.ForeColor = System.Drawing.Color.Blue;
+            this.btn_persaldo.Location = new System.Drawing.Point(64, 282);
+            this.btn_persaldo.Name = "btn_persaldo";
+            this.btn_persaldo.Size = new System.Drawing.Size(103, 49);
+            this.btn_persaldo.TabIndex = 0;
+            this.btn_persaldo.Text = "Visualizza persona\r\n e saldo";
+            this.btn_persaldo.UseVisualStyleBackColor = false;
+            this.btn_persaldo.Click += new System.EventHandler(this.btn_persaldo_Click);
             // 
             // button2
             // 
@@ -72,33 +76,34 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Visualizza conto \r\ne saldo";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // listBox1
+            // lst_nomi
             // 
-            this.listBox1.BackColor = System.Drawing.Color.MintCream;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(64, 34);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(143, 108);
-            this.listBox1.TabIndex = 2;
+            this.lst_nomi.BackColor = System.Drawing.Color.MintCream;
+            this.lst_nomi.FormattingEnabled = true;
+            this.lst_nomi.Location = new System.Drawing.Point(64, 34);
+            this.lst_nomi.Name = "lst_nomi";
+            this.lst_nomi.Size = new System.Drawing.Size(143, 108);
+            this.lst_nomi.TabIndex = 2;
             // 
-            // listBox2
+            // lst_conti
             // 
-            this.listBox2.BackColor = System.Drawing.Color.MintCream;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(316, 34);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(135, 108);
-            this.listBox2.TabIndex = 3;
+            this.lst_conti.BackColor = System.Drawing.Color.MintCream;
+            this.lst_conti.FormattingEnabled = true;
+            this.lst_conti.Location = new System.Drawing.Point(316, 34);
+            this.lst_conti.Name = "lst_conti";
+            this.lst_conti.Size = new System.Drawing.Size(135, 108);
+            this.lst_conti.TabIndex = 3;
             // 
-            // listBox3
+            // lst_saldi
             // 
-            this.listBox3.BackColor = System.Drawing.Color.MintCream;
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(546, 34);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(149, 108);
-            this.listBox3.TabIndex = 4;
+            this.lst_saldi.BackColor = System.Drawing.Color.MintCream;
+            this.lst_saldi.FormattingEnabled = true;
+            this.lst_saldi.Location = new System.Drawing.Point(546, 34);
+            this.lst_saldi.Name = "lst_saldi";
+            this.lst_saldi.Size = new System.Drawing.Size(149, 108);
+            this.lst_saldi.TabIndex = 4;
             // 
             // button3
             // 
@@ -148,21 +153,21 @@
             this.button6.Text = "Visualizza persona con saldo crescente";
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txt_conto
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Cyan;
-            this.textBox1.Location = new System.Drawing.Point(67, 189);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 9;
+            this.txt_conto.BackColor = System.Drawing.Color.Cyan;
+            this.txt_conto.Location = new System.Drawing.Point(67, 189);
+            this.txt_conto.Name = "txt_conto";
+            this.txt_conto.Size = new System.Drawing.Size(100, 20);
+            this.txt_conto.TabIndex = 9;
             // 
-            // textBox2
+            // txt_nome
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Cyan;
-            this.textBox2.Location = new System.Drawing.Point(67, 238);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 10;
+            this.txt_nome.BackColor = System.Drawing.Color.Cyan;
+            this.txt_nome.Location = new System.Drawing.Point(67, 238);
+            this.txt_nome.Name = "txt_nome";
+            this.txt_nome.Size = new System.Drawing.Size(100, 20);
+            this.txt_nome.TabIndex = 10;
             // 
             // label1
             // 
@@ -184,25 +189,25 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "inserisci nome cognome:";
             // 
-            // label3
+            // lbl_nomisaldo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(173, 282);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 26);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "persona:\r\nsaldo:\r\n";
+            this.lbl_nomisaldo.AutoSize = true;
+            this.lbl_nomisaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nomisaldo.Location = new System.Drawing.Point(173, 282);
+            this.lbl_nomisaldo.Name = "lbl_nomisaldo";
+            this.lbl_nomisaldo.Size = new System.Drawing.Size(56, 26);
+            this.lbl_nomisaldo.TabIndex = 13;
+            this.lbl_nomisaldo.Text = "persona:\r\nsaldo:\r\n";
             // 
-            // label4
+            // lbl_contosaldo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(173, 361);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 26);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "conto:\r\nsaldo:\r\n";
+            this.lbl_contosaldo.AutoSize = true;
+            this.lbl_contosaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_contosaldo.Location = new System.Drawing.Point(173, 361);
+            this.lbl_contosaldo.Name = "lbl_contosaldo";
+            this.lbl_contosaldo.Size = new System.Drawing.Size(43, 26);
+            this.lbl_contosaldo.TabIndex = 14;
+            this.lbl_contosaldo.Text = "conto:\r\nsaldo:\r\n";
             // 
             // label5
             // 
@@ -244,31 +249,64 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "persona:";
             // 
+            // btn_nomi
+            // 
+            this.btn_nomi.Location = new System.Drawing.Point(222, 80);
+            this.btn_nomi.Name = "btn_nomi";
+            this.btn_nomi.Size = new System.Drawing.Size(75, 23);
+            this.btn_nomi.TabIndex = 19;
+            this.btn_nomi.Text = "button7";
+            this.btn_nomi.UseVisualStyleBackColor = true;
+            this.btn_nomi.Click += new System.EventHandler(this.btn_nomi_Click);
+            // 
+            // btn_numero
+            // 
+            this.btn_numero.Location = new System.Drawing.Point(457, 80);
+            this.btn_numero.Name = "btn_numero";
+            this.btn_numero.Size = new System.Drawing.Size(75, 23);
+            this.btn_numero.TabIndex = 20;
+            this.btn_numero.Text = "button8";
+            this.btn_numero.UseVisualStyleBackColor = true;
+            this.btn_numero.Click += new System.EventHandler(this.btn_numero_Click);
+            // 
+            // btn_saldo
+            // 
+            this.btn_saldo.Location = new System.Drawing.Point(713, 80);
+            this.btn_saldo.Name = "btn_saldo";
+            this.btn_saldo.Size = new System.Drawing.Size(75, 23);
+            this.btn_saldo.TabIndex = 21;
+            this.btn_saldo.Text = "button9";
+            this.btn_saldo.UseVisualStyleBackColor = true;
+            this.btn_saldo.Click += new System.EventHandler(this.btn_saldo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_saldo);
+            this.Controls.Add(this.btn_numero);
+            this.Controls.Add(this.btn_nomi);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbl_contosaldo);
+            this.Controls.Add(this.lbl_nomisaldo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_nome);
+            this.Controls.Add(this.txt_conto);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.listBox3);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lst_saldi);
+            this.Controls.Add(this.lst_conti);
+            this.Controls.Add(this.lst_nomi);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_persaldo);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -278,25 +316,28 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_persaldo;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ListBox lst_nomi;
+        private System.Windows.Forms.ListBox lst_conti;
+        private System.Windows.Forms.ListBox lst_saldi;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_conto;
+        private System.Windows.Forms.TextBox txt_nome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_nomisaldo;
+        private System.Windows.Forms.Label lbl_contosaldo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btn_nomi;
+        private System.Windows.Forms.Button btn_numero;
+        private System.Windows.Forms.Button btn_saldo;
     }
 }
 
