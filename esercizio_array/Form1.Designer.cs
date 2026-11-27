@@ -255,32 +255,35 @@
             // 
             // btn_nomi
             // 
-            this.btn_nomi.Location = new System.Drawing.Point(222, 80);
+            this.btn_nomi.BackColor = System.Drawing.Color.LemonChiffon;
+            this.btn_nomi.Location = new System.Drawing.Point(224, 72);
             this.btn_nomi.Name = "btn_nomi";
-            this.btn_nomi.Size = new System.Drawing.Size(75, 23);
+            this.btn_nomi.Size = new System.Drawing.Size(75, 38);
             this.btn_nomi.TabIndex = 19;
-            this.btn_nomi.Text = "button7";
-            this.btn_nomi.UseVisualStyleBackColor = true;
+            this.btn_nomi.Text = "STAMPA NOMI";
+            this.btn_nomi.UseVisualStyleBackColor = false;
             this.btn_nomi.Click += new System.EventHandler(this.btn_nomi_Click);
             // 
             // btn_numero
             // 
-            this.btn_numero.Location = new System.Drawing.Point(457, 80);
+            this.btn_numero.BackColor = System.Drawing.Color.LemonChiffon;
+            this.btn_numero.Location = new System.Drawing.Point(457, 72);
             this.btn_numero.Name = "btn_numero";
-            this.btn_numero.Size = new System.Drawing.Size(75, 23);
+            this.btn_numero.Size = new System.Drawing.Size(75, 38);
             this.btn_numero.TabIndex = 20;
-            this.btn_numero.Text = "button8";
-            this.btn_numero.UseVisualStyleBackColor = true;
+            this.btn_numero.Text = "STAMPA CONTI";
+            this.btn_numero.UseVisualStyleBackColor = false;
             this.btn_numero.Click += new System.EventHandler(this.btn_numero_Click);
             // 
             // btn_saldo
             // 
-            this.btn_saldo.Location = new System.Drawing.Point(713, 80);
+            this.btn_saldo.BackColor = System.Drawing.Color.LemonChiffon;
+            this.btn_saldo.Location = new System.Drawing.Point(713, 72);
             this.btn_saldo.Name = "btn_saldo";
-            this.btn_saldo.Size = new System.Drawing.Size(75, 23);
+            this.btn_saldo.Size = new System.Drawing.Size(75, 38);
             this.btn_saldo.TabIndex = 21;
-            this.btn_saldo.Text = "button9";
-            this.btn_saldo.UseVisualStyleBackColor = true;
+            this.btn_saldo.Text = "STAMPA SALDI";
+            this.btn_saldo.UseVisualStyleBackColor = false;
             this.btn_saldo.Click += new System.EventHandler(this.btn_saldo_Click);
             // 
             // Form1
