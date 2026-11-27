@@ -65,17 +65,18 @@ namespace esercizio_array
                 {
                     i++;
                 }
-                if (trovato)
-                {
-                    lbl_nomisaldo.Text = ("persona: " + nomi[i] + "\nsaldo: " + saldi[i]);
-                }
-                else
-                {
-                    MessageBox.Show("numero di conto non valido");
-                }
+               
+            }
+            if (trovato)
+            {
+                lbl_nomisaldo.Text = ("persona: " + nomi[i] + "\nsaldo: " + saldi[i]);
+            }
+            else
+            {
+                MessageBox.Show("numero di conto non valido");
             }
 
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -85,21 +86,83 @@ namespace esercizio_array
             int[] saldi = { 11534, -2345, 3451, 127, 45673, -13, 3452 };
             string persona = txt_nome.Text;
             bool trovato = false;
-            for (int i = 0; i < 7; i++)
+            int i = 0;
+            while (i < 7 && !trovato)
             {
                 if (nomi[i] == persona)
                 {
-                    lbl_contosaldo.Text = ("conto: " + conti[i] + "\nsaldo: " + saldi[i]);
                     trovato = true;
                 }
-                if (!trovato)
+                else
                 {
-                    MessageBox.Show("inserire una persona valido");
-                    i = 6;
+                    i++;
                 }
 
-
             }
+            if (trovato)
+            {
+                lbl_contosaldo.Text = ("conto: " + conti[i] + "\nsaldo: " + saldi[i]);
+            }
+            else
+            {
+                MessageBox.Show("nome e cognome della persona non valido");
+            }
+        }
+
+        private void btn_neg_Click(object sender, EventArgs e)
+        {
+            string[] nomi = { "Rossi Mario", "Bianchi Luigi", "Belli Giulia", "Dotti Fabio", "Merli Gianna", "Zeri Giulio", "Botti Maria" };
+            int[] saldi = { 11534, -2345, 3451, 127, 45673, -13, 3452 };
+            lbl_neg.Text = "persone: ";
+
+            for ( int i =0; i < saldi.Length; i++)
+            {
+                if (saldi[i] < 0)
+                {
+                    lbl_neg.Text += "\n" + nomi[i];
+                }
+            }
+
+        }
+
+        private void btn_max_Click(object sender, EventArgs e)
+        {
+            string[] nomi = { "Rossi Mario", "Bianchi Luigi", "Belli Giulia", "Dotti Fabio", "Merli Gianna", "Zeri Giulio", "Botti Maria" };
+            int[] saldi = { 11534, -2345, 3451, 127, 45673, -13, 3452 };
+            int max = 0;
+     
+
+            for ( int i=0; i < saldi.Length; i++)
+            {
+                if (i == 0)
+                {
+                    max = saldi[i];
+                }
+                else if (saldi[i] > max)
+                {
+                    max = saldi[i];
+                    lbl_max.Text = "persona: \n" + nomi[i];
+                }
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            int[] saldi = { 11534, -2345, 3451, 127, 45673, -13, 3452 };
+            int tot = 0;
+            double media;
+            for ( int i = 0; i < saldi.Length; i++)
+            {
+                tot = tot + saldi[i];
+            }
+            media = tot / saldi.Length;
+            lbl_media.Text ="media: " + media.ToString();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string[] nomi = { "Rossi Mario", "Bianchi Luigi", "Belli Giulia", "Dotti Fabio", "Merli Gianna", "Zeri Giulio", "Botti Maria" };
+            int[] saldi = { 11534, -2345, 3451, 127, 45673, -13, 3452 };
         }
     }
 }

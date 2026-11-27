@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.btn_persaldo = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_consaldo = new System.Windows.Forms.Button();
             this.lst_nomi = new System.Windows.Forms.ListBox();
             this.lst_conti = new System.Windows.Forms.ListBox();
             this.lst_saldi = new System.Windows.Forms.ListBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btn_neg = new System.Windows.Forms.Button();
+            this.btn_max = new System.Windows.Forms.Button();
+            this.btn_media = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.txt_conto = new System.Windows.Forms.TextBox();
             this.txt_nome = new System.Windows.Forms.TextBox();
@@ -43,10 +43,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_nomisaldo = new System.Windows.Forms.Label();
             this.lbl_contosaldo = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_neg = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_media = new System.Windows.Forms.Label();
+            this.lbl_max = new System.Windows.Forms.Label();
             this.btn_nomi = new System.Windows.Forms.Button();
             this.btn_numero = new System.Windows.Forms.Button();
             this.btn_saldo = new System.Windows.Forms.Button();
@@ -65,18 +65,18 @@
             this.btn_persaldo.UseVisualStyleBackColor = false;
             this.btn_persaldo.Click += new System.EventHandler(this.btn_persaldo_Click);
             // 
-            // button2
+            // btn_consaldo
             // 
-            this.button2.BackColor = System.Drawing.Color.MistyRose;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Blue;
-            this.button2.Location = new System.Drawing.Point(64, 361);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 47);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Visualizza conto \r\ne saldo";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_consaldo.BackColor = System.Drawing.Color.MistyRose;
+            this.btn_consaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_consaldo.ForeColor = System.Drawing.Color.Blue;
+            this.btn_consaldo.Location = new System.Drawing.Point(64, 361);
+            this.btn_consaldo.Name = "btn_consaldo";
+            this.btn_consaldo.Size = new System.Drawing.Size(103, 47);
+            this.btn_consaldo.TabIndex = 1;
+            this.btn_consaldo.Text = "Visualizza conto \r\ne saldo";
+            this.btn_consaldo.UseVisualStyleBackColor = false;
+            this.btn_consaldo.Click += new System.EventHandler(this.button2_Click);
             // 
             // lst_nomi
             // 
@@ -105,41 +105,44 @@
             this.lst_saldi.Size = new System.Drawing.Size(149, 108);
             this.lst_saldi.TabIndex = 4;
             // 
-            // button3
+            // btn_neg
             // 
-            this.button3.BackColor = System.Drawing.Color.MistyRose;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Blue;
-            this.button3.Location = new System.Drawing.Point(331, 182);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 53);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Visualizza persone con \r\nconto negativo";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_neg.BackColor = System.Drawing.Color.MistyRose;
+            this.btn_neg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_neg.ForeColor = System.Drawing.Color.Blue;
+            this.btn_neg.Location = new System.Drawing.Point(331, 182);
+            this.btn_neg.Name = "btn_neg";
+            this.btn_neg.Size = new System.Drawing.Size(105, 53);
+            this.btn_neg.TabIndex = 5;
+            this.btn_neg.Text = "Visualizza persone con \r\nconto negativo";
+            this.btn_neg.UseVisualStyleBackColor = false;
+            this.btn_neg.Click += new System.EventHandler(this.btn_neg_Click);
             // 
-            // button4
+            // btn_max
             // 
-            this.button4.BackColor = System.Drawing.Color.MistyRose;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Blue;
-            this.button4.Location = new System.Drawing.Point(557, 277);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 54);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Visualizza persona con \r\nsaldo massimo";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btn_max.BackColor = System.Drawing.Color.MistyRose;
+            this.btn_max.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_max.ForeColor = System.Drawing.Color.Blue;
+            this.btn_max.Location = new System.Drawing.Point(557, 277);
+            this.btn_max.Name = "btn_max";
+            this.btn_max.Size = new System.Drawing.Size(102, 54);
+            this.btn_max.TabIndex = 6;
+            this.btn_max.Text = "Visualizza persona con \r\nsaldo massimo";
+            this.btn_max.UseVisualStyleBackColor = false;
+            this.btn_max.Click += new System.EventHandler(this.btn_max_Click);
             // 
-            // button5
+            // btn_media
             // 
-            this.button5.BackColor = System.Drawing.Color.MistyRose;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Blue;
-            this.button5.Location = new System.Drawing.Point(557, 183);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(102, 52);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Visualizza media saldi";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btn_media.BackColor = System.Drawing.Color.MistyRose;
+            this.btn_media.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_media.ForeColor = System.Drawing.Color.Blue;
+            this.btn_media.Location = new System.Drawing.Point(557, 183);
+            this.btn_media.Name = "btn_media";
+            this.btn_media.Size = new System.Drawing.Size(102, 52);
+            this.btn_media.TabIndex = 7;
+            this.btn_media.Text = "Visualizza media saldi";
+            this.btn_media.UseVisualStyleBackColor = false;
+            this.btn_media.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -148,10 +151,11 @@
             this.button6.ForeColor = System.Drawing.Color.Blue;
             this.button6.Location = new System.Drawing.Point(331, 277);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(102, 54);
+            this.button6.Size = new System.Drawing.Size(102, 63);
             this.button6.TabIndex = 8;
             this.button6.Text = "Visualizza persona con saldo crescente";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // txt_conto
             // 
@@ -209,15 +213,15 @@
             this.lbl_contosaldo.TabIndex = 14;
             this.lbl_contosaldo.Text = "conto:\r\nsaldo:\r\n";
             // 
-            // label5
+            // lbl_neg
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(442, 183);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "persone:";
+            this.lbl_neg.AutoSize = true;
+            this.lbl_neg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_neg.Location = new System.Drawing.Point(442, 183);
+            this.lbl_neg.Name = "lbl_neg";
+            this.lbl_neg.Size = new System.Drawing.Size(56, 13);
+            this.lbl_neg.TabIndex = 15;
+            this.lbl_neg.Text = "persone:";
             // 
             // label6
             // 
@@ -229,25 +233,25 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "persona:";
             // 
-            // label7
+            // lbl_media
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(672, 183);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 13);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "media saldi:";
+            this.lbl_media.AutoSize = true;
+            this.lbl_media.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_media.Location = new System.Drawing.Point(672, 183);
+            this.lbl_media.Name = "lbl_media";
+            this.lbl_media.Size = new System.Drawing.Size(74, 13);
+            this.lbl_media.TabIndex = 17;
+            this.lbl_media.Text = "media saldi:";
             // 
-            // label8
+            // lbl_max
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(672, 282);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 13);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "persona:";
+            this.lbl_max.AutoSize = true;
+            this.lbl_max.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_max.Location = new System.Drawing.Point(672, 282);
+            this.lbl_max.Name = "lbl_max";
+            this.lbl_max.Size = new System.Drawing.Size(56, 13);
+            this.lbl_max.TabIndex = 18;
+            this.lbl_max.Text = "persona:";
             // 
             // btn_nomi
             // 
@@ -288,10 +292,10 @@
             this.Controls.Add(this.btn_saldo);
             this.Controls.Add(this.btn_numero);
             this.Controls.Add(this.btn_nomi);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lbl_max);
+            this.Controls.Add(this.lbl_media);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbl_neg);
             this.Controls.Add(this.lbl_contosaldo);
             this.Controls.Add(this.lbl_nomisaldo);
             this.Controls.Add(this.label2);
@@ -299,13 +303,13 @@
             this.Controls.Add(this.txt_nome);
             this.Controls.Add(this.txt_conto);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btn_media);
+            this.Controls.Add(this.btn_max);
+            this.Controls.Add(this.btn_neg);
             this.Controls.Add(this.lst_saldi);
             this.Controls.Add(this.lst_conti);
             this.Controls.Add(this.lst_nomi);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_consaldo);
             this.Controls.Add(this.btn_persaldo);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -317,13 +321,13 @@
         #endregion
 
         private System.Windows.Forms.Button btn_persaldo;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_consaldo;
         private System.Windows.Forms.ListBox lst_nomi;
         private System.Windows.Forms.ListBox lst_conti;
         private System.Windows.Forms.ListBox lst_saldi;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btn_neg;
+        private System.Windows.Forms.Button btn_max;
+        private System.Windows.Forms.Button btn_media;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox txt_conto;
         private System.Windows.Forms.TextBox txt_nome;
@@ -331,10 +335,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl_nomisaldo;
         private System.Windows.Forms.Label lbl_contosaldo;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbl_neg;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbl_media;
+        private System.Windows.Forms.Label lbl_max;
         private System.Windows.Forms.Button btn_nomi;
         private System.Windows.Forms.Button btn_numero;
         private System.Windows.Forms.Button btn_saldo;
